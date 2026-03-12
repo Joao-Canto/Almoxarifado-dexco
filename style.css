@@ -1,5 +1,9 @@
+*{
+box-sizing: border-box;
+}
+
 body{
-font-family: Arial;
+font-family: Arial, sans-serif;
 margin:0;
 background:#f4f6f9;
 }
@@ -16,6 +20,8 @@ display:grid;
 grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
 gap:20px;
 padding:20px;
+max-width:1200px;
+margin:auto;
 }
 
 section{
@@ -47,6 +53,7 @@ padding:14px;
 border-radius:8px;
 cursor:pointer;
 font-size:16px;
+transition:0.2s;
 }
 
 button:hover{
@@ -60,40 +67,45 @@ margin-bottom:10px;
 border-radius:8px;
 }
 
-/* Tablet */
+/* Tablets */
 
-@media (max-width: 900px){
-
-main{
-grid-template-columns: 1fr 1fr;
-}
-
-}
-
-/* Mobile */
-
-@media (max-width: 600px){
+@media (max-width:900px){
 
 main{
-grid-template-columns: 1fr;
-padding:10px;
+grid-template-columns: repeat(2,1fr);
 }
+
+}
+
+/* Celulares */
+
+@media (max-width:600px){
 
 header{
 font-size:18px;
+padding:12px;
+}
+
+main{
+grid-template-columns:1fr;
+padding:12px;
+gap:15px;
 }
 
 section{
 padding:15px;
 }
 
-button{
-padding:16px;
-font-size:18px;
-}
-
 input{
-font-size:18px;
+font-size:17px;
+padding:14px;
+}
+
+button{
+font-size:17px;
+padding:16px;
 }
 
 }
+}
+
