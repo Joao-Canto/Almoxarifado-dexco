@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Almoxarifado</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Sistema de Almoxarifado</h1>
+</header>
+
+<main>
+
+<section class="persona">
+<h2>Operador do Sistema</h2>
+
+<p><strong>Nome:</strong> João Pedro Canto Moraes de Camargo</p>
+<p><strong>Cargo:</strong> Auxiliar de Almoxarifado Industrial</p>
+<p><strong>Objetivo:</strong> Controlar entrada e saída de peças e manter o estoque atualizado.</p>
+<p><strong>Dificuldades:</strong> Sistemas lentos, falta de alerta de estoque baixo e dificuldade de busca de peças.</p>
+<p><strong>Uso do sistema:</strong> Principalmente desktop no almoxarifado e tablet para conferência de estoque.</p>
+
+</section>
+
+<section>
+<h2>Cadastrar Peça</h2>
+<input type="text" id="nome" placeholder="Nome da peça">
+<input type="number" id="quantidade" placeholder="Quantidade inicial">
+<button onclick="cadastrarPeca()">Cadastrar</button>
+</section>
+
+<section>
+<h2>Entrada de Estoque</h2>
+<input type="text" id="entradaNome" placeholder="Nome da peça">
+<input type="number" id="entradaQtd" placeholder="Quantidade">
+<button onclick="entradaEstoque()">Registrar Entrada</button>
+</section>
+
+<section>
+<h2>Saída para OS</h2>
+
+<input type="text" id="os" placeholder="Número da OS">
+<input type="text" id="saidaNome" placeholder="Nome da peça">
+<input type="number" id="saidaQtd" placeholder="Quantidade">
+
+<button onclick="saidaEstoque()">Registrar Saída</button>
+
+</section>
+
+<section>
+<h2>Estoque Atual</h2>
+<ul id="lista"></ul>
+</section>
+
+<section>
+<h2>Histórico de Saídas</h2>
+<ul id="historico"></ul>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
